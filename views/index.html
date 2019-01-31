@@ -1,10 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>DELI-VERY</title>
+	<head>
+        <title>Page title shown in window title</title>
+        <meta charset="utf-8"/>
     </head>
     <body>
-        <h1>Hello World!!!</h1>
-        <a href="/map" target="_blank">Open map in new window</a>.
+    	<main>
+    		<h1>Welcome to BurgerHeaven Online</h1>
+    		<section>
+    			<h1>Select Burger</h1>
+    			<p>This is where you execute burger selection</p>
+    			<table>
+    				<thead>
+    					<tr>
+    						<th>The Fire Burger</th>
+    						<th>Fried Turkey Burger</th>
+    						<th>A Double w/ Cheese</th>
+    					</tr>
+    				</thead>
+    				<tbody>
+    					<tr align="center">
+    						<td><img src="img/the_fire_burger.jpg" alt="The Fire Burger" title="Fire Burger" height="200"></td>
+    						<td><img src="img/fried_turkey_burger.jpeg" alt="Fried Turkey Burger" title="Fried Turkey" height="200" height="170"></td>
+    						<td><img src="img/double_with_cheese.jpg" alt="A Double with Cheese" title="Double w/ cheese" height="200"></td>
+    					</tr>
+    					<tr>
+    						<td>
+    							<ul>
+    								<li>750 kCal</li>
+    								<li>Contains lactose</li>
+    								<li>Contains gluten</li>
+    							</ul>
+    						</td>
+    						<td>
+    							<ul>
+    								<li>600 kCal</li>
+    								<li>Contains lactose</li>
+    							</ul>
+    						</td>
+    						<td>
+    							<ul>
+    								<li>1800 kCal</li>
+    								<li>Contains lactose</li>
+    								<li>Contains gluten</li>
+    							</ul>
+    						</td>
+    					</tr>
+    				</tbody>
+    		</table>
+    		</section>
+    		<section id="contact">
+    			<h1>Customer Information</h1>
+    			<p>This is where you provide necessary information.</p>
+    			<h3>Delivery Information:</h3>
+    			<form>
+    				<p>
+    					<label for="fullname">Full name</label><br>
+    					<input type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name">
+					</p>
+					<p>
+					    <label for="email">E-mail</label><br>
+					    <input type="text" id="email" name="em" required="required" placeholder="E-mail address">
+					</p>
+					<p>
+					    <label for="street">Street</label><br>
+					    <input type="text" id="street" name="st" required="required" placeholder="Street name">
+					</p>
+					<p>
+					    <label for="house">House</label><br>
+					    <input type="text" id="house" name="hou" required="required" placeholder="House number">
+					</p>
+					<p>
+					    <label for="payment">Payment options</label><br>
+					    <select id="payment" name="pay">
+					        <option selceted="selected">Credit Card</option>
+					        <option>Paypal</option>
+					        <option>Cash</option>
+					        <option>Check</option>
+					    </select>
+					</p>
+					<p>
+						<label for="male">Gender</label><br>
+					    <input type="radio" checked="checked" id="male" name="gen" value="male" required="required">
+					    <label for="male">Male</label><br>
+					    <input type="radio" id="female" name="gen" value="female" required="required">
+					    <label for="female">Female</label><br>
+					    <input type="radio" id="non-binary" name="gen" value="non-binary" required="required">
+					    <label for="non-binary">Non-binary</label><br>
+					    <input type="radio" id="undisclosed" name="gen" value="undisclosed" required="required">
+					    <label for="undisclosed">Undisclosed</label><br>
+					</p>
+    			</form>
+    		</section>
+			<button type="submit"><img src="img/send_button.png" width="20"> Send Order!</button>
+    	</main>
+	 <footer>
+	 	<hr>
+  		<p>© 2019 MyBurgers Inc.</p>
+	</footer> 
     </body>
 </html>
