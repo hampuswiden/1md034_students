@@ -1,0 +1,72 @@
+body {
+    font-family: arial, sans-serif;
+    font-size: 18px
+}
+
+.allergy { /* Makes all allergy key words, i.e. lactose and gluten, bold. */
+    font-weight: bold;
+}
+
+#burger_selection {
+	color: #FFFFFF;
+	background-color: #000000;
+	font-family: "times new roman", serif;
+	border: 2px dashed #FFFFFF;
+}
+
+#customer_information {
+	border: 2px dashed #000000;
+}
+
+#myheader {
+	margin: 15px; 
+}
+
+#myheader_picture {
+	opacity: 0.35;
+	height: 500px;
+}
+
+#myheader_text {
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.grid-container {
+	margin-top: 45px;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: 195px 330px 230px;
+	background-color: #000;
+	color: #FFF;
+	text-align: left;
+}
+
+.grid-title {
+	font-weight: bold;
+	text-align: center;
+}
+
+.grid-picture {
+	text-align: center;
+}
+
+button {
+	margin: 10px;
+}
+
+button:hover {
+    background-color: #00FF00;
+    cursor: pointer;
+}
+
+table {
+	width: 45%;
+}
+
+section {
+	margin: 15px;
+	padding: 15px;
+}

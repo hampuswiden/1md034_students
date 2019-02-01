@@ -3,53 +3,49 @@
 	<head>
         <title>Page title shown in window title</title>
         <meta charset="utf-8"/>
+        <!--<link rel="stylesheet" type="text/css" href="css/reset.css">-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     <body>
     	<main>
-    		<h1>Welcome to BurgerHeaven Online</h1>
-    		<section>
+    		<div id="myheader">
+	    		<h1 id=myheader_text>Welcome to BurgerHeaven Online</h1>
+	    		<img id="myheader_picture" src="img/panorama.jpg" alt="header background" title="Header Background">
+	    	</div>
+    		<section id="burger_selection">
     			<h1>Select Burger</h1>
     			<p>This is where you execute burger selection</p>
-    			<table>
-    				<thead>
-    					<tr>
-    						<th>The Fire Burger</th>
-    						<th>Fried Turkey Burger</th>
-    						<th>A Double w/ Cheese</th>
-    					</tr>
-    				</thead>
-    				<tbody>
-    					<tr align="center">
-    						<td><img src="img/the_fire_burger.jpg" alt="The Fire Burger" title="Fire Burger" height="200"></td>
-    						<td><img src="img/fried_turkey_burger.jpeg" alt="Fried Turkey Burger" title="Fried Turkey" height="200" height="170"></td>
-    						<td><img src="img/double_with_cheese.jpg" alt="A Double with Cheese" title="Double w/ cheese" height="200"></td>
-    					</tr>
-    					<tr>
-    						<td>
-    							<ul>
-    								<li>750 kCal</li>
-    								<li>Contains lactose</li>
-    								<li>Contains gluten</li>
-    							</ul>
-    						</td>
-    						<td>
-    							<ul>
-    								<li>600 kCal</li>
-    								<li>Contains lactose</li>
-    							</ul>
-    						</td>
-    						<td>
-    							<ul>
-    								<li>1800 kCal</li>
-    								<li>Contains lactose</li>
-    								<li>Contains gluten</li>
-    							</ul>
-    						</td>
-    					</tr>
-    				</tbody>
-    		</table>
+    			
+	    		<div class="grid-container">
+					<div class="grid-title">The Fire Burger</div>
+					<div class="grid-title">Fried Turkey Burger</div>
+					<div class="grid-title">A Double w/ Cheese</div>
+					<div class="grid-picture"><img src="img/the_fire_burger.jpg" alt="The Fire Burger" title="Fire Burger" height="200"></td></div>
+					<div class="grid-picture"><img src="img/fried_turkey_burger.jpeg" alt="Fried Turkey Burger" title="Fried Turkey" height="200" height="170"></div>
+					<div class="grid-picture"><img src="img/double_with_cheese.jpg" alt="A Double with Cheese" title="Double w/ cheese" height="200"></div>
+					<div class="grid-item">
+						<ul>
+							<li>750 kCal</li>
+							<li>Contains <span class="allergy">lactose</span></li>
+							<li>Contains <span class="allergy">gluten</span></li>
+						</ul></div>
+					<div class="grid-item">
+						<ul>	
+							<li>600 kCal</li>
+							<li>Contains <span class="allergy">lactose</span></li>
+						</ul>
+					</div>
+					<div class="grid-item">
+						<ul>
+							<li>1800 kCal</li>
+							<li>Contains <span class="allergy">lactose</span></li>
+							<li>Contains <span class="allergy">gluten</span></li>
+						</ul>
+					</div>
+				</div> 
+
     		</section>
-    		<section id="contact">
+    		<section id="customer_information">
     			<h1>Customer Information</h1>
     			<p>This is where you provide necessary information.</p>
     			<h3>Delivery Information:</h3>
@@ -74,20 +70,20 @@
 					    <label for="payment">Payment options</label><br>
 					    <select id="payment" name="pay">
 					        <option selceted="selected">Credit Card</option>
-					        <option>Paypal</option>
+					        <option>PayPal</option>
 					        <option>Cash</option>
 					        <option>Check</option>
 					    </select>
 					</p>
 					<p>
 						<label for="male">Gender</label><br>
-					    <input type="radio" checked="checked" id="male" name="gen" value="male" required="required">
+					    <input type="radio" id="male" name="gen" value="male" required="required">
 					    <label for="male">Male</label><br>
 					    <input type="radio" id="female" name="gen" value="female" required="required">
 					    <label for="female">Female</label><br>
 					    <input type="radio" id="non-binary" name="gen" value="non-binary" required="required">
 					    <label for="non-binary">Non-binary</label><br>
-					    <input type="radio" id="undisclosed" name="gen" value="undisclosed" required="required">
+					    <input type="radio" id="undisclosed" checked="checked" name="gen" value="undisclosed" required="required">
 					    <label for="undisclosed">Undisclosed</label><br>
 					</p>
     			</form>
