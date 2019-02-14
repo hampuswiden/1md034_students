@@ -34,22 +34,22 @@ body {
 	transform: translate(-50%, -50%);
 }
 
-.grid-container {
+.wrapper {
 	margin-top: 45px;
 	display: grid;
-	grid-gap: 10px;
-	grid-template-columns: 195px 330px 230px;
+	grid-gap: 16px;
+	grid-template-columns: 210px 210px 210px;
 	background-color: #000;
 	color: #FFF;
 	text-align: left;
 }
 
-.grid-title {
-	font-weight: bold;
-	text-align: center;
+.burgerImage {
+	width: 200px;
+	height: 200px;
 }
 
-.grid-picture {
+.wrapper h3 {
 	text-align: center;
 }
 
