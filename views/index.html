@@ -39,59 +39,61 @@
 			    </div>
 
     		</section>
-    		<section id="customer_information">
-    			<h1>Customer Information</h1>
-    			<p>This is where you provide necessary information.</p>
-    			<h3>Delivery Information:</h3>
-    			<form>
-    				<p>
-    					<label for="fullname">Full name</label><br>
-    					<input class="formValue" type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name">
-					</p>
-					<p>
-					    <label for="email">E-mail</label><br>
-					    <input class="formValue" type="text" id="email" name="em" required="required" placeholder="E-mail address">
-					</p>
+    		<div id="op">
+	    		<section id="customer_information">
+	    			<h1>Customer Information</h1>
+	    			<p>This is where you provide necessary information.</p>
+	    			<h3>Delivery Information:</h3>
+	    			<form>
+	    				<p>
+	    					<label for="fullname">Full name</label><br>
+	    					<input class="formValue" type="text" id="fullname" name="fn" required="required" placeholder="First- and Last name">
+						</p>
+						<p>
+						    <label for="email">E-mail</label><br>
+						    <input class="formValue" type="text" id="email" name="em" required="required" placeholder="E-mail address">
+						</p>
 
-					<div class="view-box">
-						<div id="dots" v-on:click="addOrder">
-							<div 
-								v-for="(order, key) in orders"
-								v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">{{key}}
+						<div class="view-box">
+							<div id="dots" v-on:click="displayOrder($event)">
+								<div 
+									v-for="foo in order"
+									v-bind:style="{ left: order.details.x + 'px', top: order.details.y + 'px'}">T
+								</div>
 							</div>
 						</div>
-					</div>
 
-					<p>
-					    <label for="payment">Payment options</label><br>
-					    <select class="formValue" id="payment" name="pay">
-					        <option selected="selected" value="creditcard">Credit Card</option>
-					        <option value="paypal">PayPal</option>
-					        <option value="cash">Cash</option>
-					        <option value="check">Check</option>
-					    </select>
-					</p>
-					<p>
-						<label for="male">Gender</label><br>
-					    <input type="radio" id="male" name="gender" value="male" required="required">
-					    <label for="male">Male</label><br>
-					    <input type="radio" id="female" name="gender" value="female" required="required">
-					    <label for="female">Female</label><br>
-					    <input type="radio" id="non-binary" name="gender" value="non-binary" required="required">
-					    <label for="non-binary">Non-binary</label><br>
-					    <input type="radio" id="undisclosed" checked="checked" name="gender" value="undisclosed" required="required">
-					    <label for="undisclosed">Undisclosed</label><br>
-					</p>
-    			</form>
-    		</section>
+						<p>
+						    <label for="payment">Payment options</label><br>
+						    <select class="formValue" id="payment" name="pay">
+						        <option selected="selected" value="creditcard">Credit Card</option>
+						        <option value="paypal">PayPal</option>
+						        <option value="cash">Cash</option>
+						        <option value="check">Check</option>
+						    </select>
+						</p>
+						<p>
+							<label for="male">Gender</label><br>
+						    <input type="radio" id="male" name="gender" value="male" required="required">
+						    <label for="male">Male</label><br>
+						    <input type="radio" id="female" name="gender" value="female" required="required">
+						    <label for="female">Female</label><br>
+						    <input type="radio" id="non-binary" name="gender" value="non-binary" required="required">
+						    <label for="non-binary">Non-binary</label><br>
+						    <input type="radio" id="undisclosed" checked="checked" name="gender" value="undisclosed" required="required">
+						    <label for="undisclosed">Undisclosed</label><br>
+						</p>
+	    			</form>
+	    		</section>
 
-			<div id="orders">
-			    <button v-on:click="sendOrder()"><img src="img/send_button.png" width="20"> Send Order!</button>
-				<p v-if="showOrderInfo">gender: {{readValues()[0]}}</p>
-				<p v-if="showOrderInfo">name: {{readValues()[1]}}</p>
-				<p v-if="showOrderInfo">email: {{readValues()[2]}}</p>
-				<p v-if="showOrderInfo">payment method: {{readValues()[3]}}</p>
-				<p v-if="showOrderInfo" v-for="burger in showBurgers()">burger: {{burger}}</p>
+				<div id="orders">
+				    <button v-on:click="opFunction($event)"><img src="img/send_button.png" width="20"> Send Order!</button>
+					<p v-if="showOrderInfo">gender: {{readValues()[0]}}</p>
+					<p v-if="showOrderInfo">name: {{readValues()[1]}}</p>
+					<p v-if="showOrderInfo">email: {{readValues()[2]}}</p>
+					<p v-if="showOrderInfo">payment method: {{readValues()[3]}}</p>
+					<p v-if="showOrderInfo" v-for="burger in showBurgers()">burger: {{burger}}</p>
+				</div>
 			</div>
     	</main>
 	 <footer>	
